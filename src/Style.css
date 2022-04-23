@@ -1,0 +1,133 @@
+body {
+    background-color: #ebd7b5;
+}
+
+.title {
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+    color: #2d4691;
+    font-weight: 700;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: #ff8000;
+    text-shadow: #2d4691 2px 2px 0px, #9C9C9C 4px 4px 0px;
+}
+
+.divider {
+    text-align: center;
+    border-bottom: 4px solid #e06584;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+}
+
+.ava-group {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+
+}
+
+.ava-wrapped {
+    border: 15px solid #2d4691;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 50px;
+    position: sticky;
+    top: 70px;
+    margin-left: 40px;
+}
+
+.list-section {
+    max-width: 700px;
+    text-align: center;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background-color: #f0ce71;
+    border: 3px solid #f09a06;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+.clickable-square {
+    border: 1px dotted #696969;
+    border-radius: 10px;
+
+    margin: 2px;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.img {
+    position: absolute;
+
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img:hover {
+    cursor: pointer;
+    background-color: #f1e2b8;
+}
+
+.list-section h2 {
+    text-align: center;
+    color: #9e6503;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.button {
+    position: relative;
+    border: none;
+    background-color: #4b913f;
+    padding: 10px;
+    border-radius: 15px;
+    color: #ebd7b5;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+    left: 70px;
+}
+
+.button:hover {
+    background-color: #2d5925;
+    ;
+}
+
+.body {
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.eyebrows {
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.avatar {
+    height: 280px;
+    position: relative;
+    width: 260px;
+}
+
+.selected {
+    background-color: rgb(244, 162, 162);
+}
