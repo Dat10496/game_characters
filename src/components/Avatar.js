@@ -6,7 +6,7 @@ function Avatar({ parts }) {
     <>
       <BodyPart path="body" index={parts.body} zIndex={0} />
       <BodyPart path="eyes" index={parts.eyes} zIndex={1} />
-      <BodyPart path="hair" index={parts.hair} zIndex={6} />
+      <BodyPart path="hair" index={parts.hair} zIndex={3} />
       <BodyPart path="mouths" index={parts.mouth} zIndex={4} />
       <BodyPart path="eyebrows" index={parts.eyebrows} zIndex={4} />
       <BodyPart path="accessories/glasses" index={parts.glasses} zIndex={5} />

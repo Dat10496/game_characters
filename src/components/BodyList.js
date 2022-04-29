@@ -12,6 +12,7 @@ function BodyList({ total, path, size, setParts, parts, part }) {
     <>
       {bodyArray.map((item, index) => (
         <div
+        key={index}
           className={`clickable-square ${
             parts[part] === index ? "selected" : ""
           }`}

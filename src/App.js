@@ -1,7 +1,7 @@
 import React from "react";
 import BodyList from "./components/BodyList";
-import Style from "./Style.css";
-import { useState, useEffect } from "react";
+import "./App.css";
+import { useState } from "react";
 import Avatar from "./components/Avatar";
 const total = {
   body: 17,
@@ -32,46 +32,23 @@ function App() {
     facial_hair: 0,
   });
 
-  const [randomNumberBody, setRandomNumberBody] = useState(0);
-  const [randomNumberEyes, setRandomNumberEyes] = useState(0);
-  const [randomNumberHair, setRandomNumberHair] = useState(0);
-  const [randomNumberMouth, setRandomNumberMouth] = useState(0);
-  const [randomNumberGlasses, setRandomNumberGlasses] = useState(0);
-  const [randomNumberClothing1, setRandomNumberClothing1] = useState(0);
-  const [randomNumberClothing2, setRandomNumberClothing2] = useState(0);
-  const [randomNumberClothing3, setRandomNumberClothing3] = useState(0);
-  const [randomNumberFacialhair, setRandomNumberFacialhair] = useState(0);
-  const [randomNumberEyeBrows, setRandomNumberEyeBrows] = useState(0);
-
   const randomButton = () => {
-    setRandomNumberBody(Math.floor(Math.random() * total.body));
-    setRandomNumberEyes(Math.floor(Math.random() * total.eyes));
-    setRandomNumberHair(Math.floor(Math.random() * total.hair));
-    setRandomNumberMouth(Math.floor(Math.random() * total.mouth));
-    setRandomNumberGlasses(Math.floor(Math.random() * total.glasses));
-    setRandomNumberClothing1(Math.floor(Math.random() * total.clothing1));
-    setRandomNumberClothing2(Math.floor(Math.random() * total.clothing2));
-    setRandomNumberClothing3(Math.floor(Math.random() * total.clothing3));
-    setRandomNumberFacialhair(Math.floor(Math.random() * total.facial_hair));
-    setRandomNumberEyeBrows(Math.floor(Math.random() * total.eyebrows));
+    setParts({
+      body: Math.floor(Math.random() * total.body),
+      eyes: Math.floor(Math.random() * total.eyes),
+      hair: Math.floor(Math.random() * total.hair),
+      mouth: Math.floor(Math.random() * total.mouth),
+      eyebrows: Math.floor(Math.random() * total.eyebrows),
+      hat: Math.floor(Math.random() * total.hat),
+      glasses: Math.floor(Math.random() * total.glasses),
+      clothing1: Math.floor(Math.random() * total.clothing1),
+      clothing2: Math.floor(Math.random() * total.clothing2),
+      clothing3: Math.floor(Math.random() * total.clothing3),
+      facial_hair: Math.floor(Math.random() * total.facial_hair),
+    });
   };
 
-  useEffect(() => {
-    setParts({
-      body: randomNumberBody,
-      hair: randomNumberHair,
-      mouth: randomNumberMouth,
-      eyebrows: randomNumberEyeBrows,
-      eyes: randomNumberEyes,
-      glasses: randomNumberGlasses,
-      clothing1: randomNumberClothing1,
-      clothing2: randomNumberClothing2,
-      clothing3: randomNumberClothing3,
-      facial_hair: randomNumberFacialhair,
-    });
-  }, [randomNumberBody]);
-
-  console.log();
+  console.log("render");
 
   return (
     <>
@@ -137,7 +114,7 @@ function App() {
               <BodyList
                 total={total.mouth}
                 path="mouths"
-                size="80x`"
+                size="80"
                 part="mouth"
                 setParts={setParts}
                 parts={parts}
