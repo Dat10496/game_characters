@@ -48,8 +48,6 @@ function App() {
     });
   };
 
-  console.log("render");
-
   return (
     <>
       <div className="title">CHARACTER</div>
